@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Pet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Upload a Pet</h1>
+<form method="post" enctype="multipart/form-data">
+    Name: <input type="text" name="name"><br>
+    Age: <input type="text" name="age"><br>
+    Breed: <input type="text" name="breed"><br>
+    Photo: <input type="file" name="photo"><br>
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
