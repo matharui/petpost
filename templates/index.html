@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PetPost</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>Adoptable Pets</h1>
+<a href="/upload">Add New Pet</a>
+<ul>
+{% for pet in pets %}
+    <li>
+        <img src="{{ pet.image }}" alt="{{ pet.name }}" width="200"><br>
+        <strong>{{ pet.name }}</strong><br>
+        Age: {{ pet.age }}<br>
+        Breed: {{ pet.breed }}
+    </li>
+{% endfor %}
+</ul>
+</body>
+</html>
